@@ -153,7 +153,7 @@ revealjs_presentation <- function(incremental = FALSE,
     
     for (option in names(reveal_options)) {
       # special handling for nested options
-      if (option %in% c("chalkboard", "menu")) {
+      if (option %in% c("chalkboard", "menu", "anything")) {
         nested_options <- reveal_options[[option]]
         for (nested_option in names(nested_options)) {
           add_reveal_option(paste0(option, "-", nested_option),
@@ -175,7 +175,7 @@ revealjs_presentation <- function(incremental = FALSE,
       stop("Using reveal_plugins requires self_contained: false")
     
     # validate specified plugins are supported
-    supported_plugins <- c("notes", "search", "zoom", "chalkboard", "menu")
+    supported_plugins <- c("notes", "search", "zoom", "chalkboard", "menu", "anything")
     invalid_plugins <- setdiff(reveal_plugins, supported_plugins)
     if (length(invalid_plugins) > 0)
       stop("The following plugin(s) are not supported: ",
