@@ -85,7 +85,6 @@ revealjs_presentation <- function(incremental = FALSE,
                                   lib_dir = NULL,
                                   pandoc_args = NULL,
                                   extra_dependencies = NULL,
-                                  Reveal_Path = "reveal.js-3.3.0.1",
                                   ...) {
   
   # function to lookup reveal resource
@@ -219,7 +218,7 @@ revealjs_presentation <- function(incremental = FALSE,
     args <- c()
     
     # reveal.js
-    revealjs_path <- system.file(Reveal_Path, package = "revealjs")
+    revealjs_path <- system.file("reveal.js-master", package = "revealjs")
     if (!self_contained || identical(.Platform$OS.type, "windows"))
       revealjs_path <- relative_to(
         output_dir, render_supporting_files(revealjs_path, lib_dir))
