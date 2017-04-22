@@ -501,30 +501,36 @@ $endfor$
   <div class="reveal">
     <div class="slides">
 
-$if(title)$
-<section>
-    <h1 class="title">$title$</h1>
-$if(subtitle)$
-  <h2 class="subtitle">$subtitle$</h1>
-$endif$
-$for(author)$
-    <h3 class="author">$author$</h2>
-$endfor$
-$if(date)$
-    <h3 class="date">$date$</h3>
-$endif$
-$if(other)$
-    <h4 class="other">$other$</h4>
-$endif$
-</section>
-$endif$
-$if(toc)$
-<section id="$idprefix$TOC">
-$toc$
-</section>
-$endif$
+    $if(title)$
+      $if(custom_title_params)$
+        <section $custom_title_params$ >
+      $else$
+        <section class="title-slide" >
+      $endif$
+        <section >
+            <h1 class="title">$title$</h1>
+          $if(subtitle)$
+            <h2 class="subtitle">$subtitle$</h1>
+          $endif$
+          $for(author)$
+              <h3 class="author">$author$</h2>
+          $endfor$
+          $if(date)$
+              <h3 class="date">$date$</h3>
+          $endif$
+          $if(other)$
+              <h4 class="other">$other$</h4>
+          $endif$
+        </section>
+    $endif$
 
-$body$
+    $if(toc)$
+    <section id="$idprefix$TOC">
+    $toc$
+    </section>
+    $endif$
+
+    $body$
     </div>
   </div>
 
