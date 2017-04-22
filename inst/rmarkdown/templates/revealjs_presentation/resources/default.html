@@ -502,26 +502,26 @@ $endfor$
     <div class="slides">
 
     $if(title)$
-      $if(custom_title_params)$
-        <section $custom_title_params$ >
-      $else$
-        <section class="title-slide" >
-      $endif$
-        <section >
-            <h2 class="title">$title$</h2>
-          $if(subtitle)$
-            <h3 class="subtitle">$subtitle$</h3>
-          $endif$
-          $for(author)$
-              <h4 class="author">$author$</h4>
-          $endfor$
-          $if(date)$
-              <h5 class="date">$date$</h5>
-          $endif$
-          $if(other)$
-              <h6 class="other">$other$</h6>
-          $endif$
-        </section>
+    $if(custom_title_params)$
+    <section $custom_title_params$ >
+    $else$
+    <section class="title-slide" >
+    $endif$
+    <section >
+    <h2 class="title">$title$</h2>
+    $if(subtitle)$
+    <h3 class="subtitle">$subtitle$</h3>
+    $endif$
+    $for(author)$
+    <h4 class="author">$author$</h4>
+    $endfor$
+    $if(date)$
+    <h5 class="date">$date$</h5>
+    $endif$
+    $if(other)$
+    <h6 class="other">$other$</h6>
+    $endif$
+    </section>
     $endif$
 
     $if(toc)$
