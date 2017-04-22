@@ -219,7 +219,7 @@ revealjs_presentation <- function(incremental = FALSE,
     args <- c()
     
     # reveal.js
-    if (latest_rev){
+    if (!latest_rev){
       revealjs_path <- system.file("reveal.js-3.3.0.1", package = "revealjs")
     } else {
       revealjs_path <- system.file("reveal.js-master", package = "revealjs")
