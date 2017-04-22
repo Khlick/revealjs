@@ -85,7 +85,7 @@ revealjs_presentation <- function(incremental = FALSE,
                                   lib_dir = NULL,
                                   pandoc_args = NULL,
                                   extra_dependencies = NULL,
-                                  dev = 'png',
+                                  dev = NULL,
                                   latest_rev = FALSE,
                                   ...) {
   
@@ -168,6 +168,8 @@ revealjs_presentation <- function(incremental = FALSE,
       }
     }
   }
+  
+  # 
   
   # reveal plugins
   if (is.character(reveal_plugins)) {

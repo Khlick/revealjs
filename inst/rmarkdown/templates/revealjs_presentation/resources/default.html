@@ -502,7 +502,7 @@ $endfor$
     <div class="slides">
     $if(title)$
     $if(custom_title_params)$
-    <section $custom_title_params$ >
+    <section $for(custom_title_params)$ $custom_title_params$ $endfor$ >
     $else$
     <section class="title-slide" >
     $endif$
